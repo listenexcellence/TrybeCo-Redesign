@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/animate.css" />
+    <link href="./assets/img/icon.png" rel="shortcut icon" type="x-icon" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/99ff00f922.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('VaJ8AA0Fs5BbCUsZl');
+        })();
+    </script>
+    <title>TheTrybe - Home</title>
+  </head>
+  
+  <body>
+    <div class='cursor' id="cursor"></div>
+
+    <div class="preload">
+      <div class="preloadContent">
+        <div class="butn">Quotes For The Day</div>
+        <div class="quote"><p style="font-size: 20px; text-align: center; width: 80%;">Clean code always looks like it was written by someone who cares. — Robert C. Martin</p></div>
+        <div class="counter"><h1>100</h1></div>
+      </div>
+    </div>
+    <nav>
+      <a href="./index.html">
+        <img width="95px" src="./assets/img/logo.png" />
+      </a>
+      <div>
+        <div id="container">
+          <div class="circle"></div>
+          <p id="clock"></p>
+        </div>
+      </div>
+    </nav>
+    <div class="main">
+      <div class="form-popup-bg">
+        <div class="form-container">
+          <i class="fa-solid fa-xmark close-button" id="btnCloseForm"></i>
+          <h1>You Have Joined Successfully</span
+            ><span
+              style="
+                font-family: Montserrat;
+                font-weight: 700;
+                color: #ba0000;
+                font-size: 40px;
+              "
+              >.</span></h1>
+          <p>Kindly fill this form to register your interest .</p>
+          <form action="javascript:sendMail();">
+            <div class="form-group2">
+              <div class="form-group">
+                <label for="">Name <span class="reddd">*</span></label>
+                <input type="text" class="form-control" id="nameIn" required/>
+              </div>
+              <div class="form-group">
+                <label for="">E-Mail Address<span class="reddd">*</span></label>
+                <input class="form-control" type="email" id="mailIn" required/>
+              </div>
+            </div>
+            <div class="form-group2"> <div class="form-group">
+              <label for="">Company Name</label>
+              <input class="form-control" type="text" id="compIn" />
+            </div>
+            <div class="form-group">
+              <label for="">Phone Number</label>
+              <input class="form-control" type="text" id="phoneIn" />
+            </div></div>
+           
+            <input type="submit" class="mailSend">
+          </form>
+          
+          <!-- <button class="mailSend" onclick="sendMail()">Submit</button> -->
+      </div>
+      </div>
+        <div class="alert-popup-bg">
+          <div class="alert-container">
+            <i class="fa-solid fa-xmark close-button" id="btnCloseAlert"></i>
+            <h1>You Have Joined Successfully</span
+              ><span
+                style="
+                  font-family: Montserrat;
+                  font-weight: 700;
+                  color: #ba0000;
+                  font-size: 40px;
+                "
+                >.</span></h1>
+          </div>
+        </div>
+
+      <!-- Main body of it all -->
+
+      <!-- FACTS -->
+      <div class="bodie">
+        <div class="factsContainer">
+          <div class="factsHead">
+            <img width="100" src="Assets/img/Group1.png">
+            <div class="factBtn">
+              <p style="font-size: 13px;">Tech Fact of The Day</p>
+            </div>
+          </div>
+          <!-- <div class="abs facts">
+            <h4 style="font-family: Poppins;">Did You Know <span
+              style="
+                font-family: Poppins;
+                font-weight: 700;
+                color: #ba0000;
+                font-size: 20px;
+              "
+              >?</span></h4>
+              <p style="font-family: Silka;">Augusta Ada King was the first programmer and was the daughter of a mad poet. Her mother promoted her interest in math and logic in an effort to prevent her from ending up like her father</p>
+          </div> -->
+        </div>
+  
+        <div class="inner">
+          <div class="textArea">
+            <p style="font-size: 40px; font-weight: 500; font-family: Poppins; line-height: 1.1;">
+              Welcome to <br>
+              <span style="font-family: PoppinsBold; font-size: 55px; line-height: 1;">TheTrybeCo</span
+              ><span
+                style="
+                  font-family: Montserrat;
+                  font-weight: 700;
+                  color: #ba0000;
+                  font-size: 50px;
+                "
+                >.</span
+              >
+            </p>
+            <br>
+            <p>We are currently working on our appearance.<br>
+              Come back later or click below to get an update<br> when we open.</p>
+              <div style="font-size: 14px;">
+                <div style="margin-bottom: -1rem;" class="gate">
+                  <img width="23" src="./assets/img/Highlight.png" />
+                  <p style="font-size: 14px"><b>TheTrybe</b> gates are closed now</p>
+                </div>
+                  <div  class="container">
+                    <div class="joinBtn">
+                      <div  class="circle1"></div>
+                      <p id="btnOpenForm">Join The Waitlist</p>
+                    </div>
+                    <img width="70" src="Assets/img/Group2.png">
+                  </div>
+              </div>
+          </div>
+          <div>
+            <div class="aboutContainer">
+              <div class="aboutHead">
+                <h4 style="font-weight: 400; font-family: poppins;">Who Are We?</h4>
+              </div>
+              <div class="about">
+                  <p style="font-family: Silka;"><span style="font-weight: 700; font-family: Poppins;">TheTrybeCo<span style="color: #ba0000; font-weight: 700; font-size: 25px;">.</span></span> is a tech agency focused on providing exceptional services with complete trust. We believe that success is achieved through highly collaborative interactions — One TRYBE at a time</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        
+
+
+      <!-- <div class="padd" style="padding: 4rem 0">
+        <div class="headText">
+          <h1>
+            Welcome to
+            <span style="font-family: Poppins; font-weight: 700">TheTrybe</span
+            ><span
+              style="
+                font-family: Montserrat;
+                font-weight: 700;
+                color: #ba0000;
+                font-size: 40px;
+              "
+              >.</span
+            >
+          </h1>
+        </div>
+        <div class="headP">
+          <p>
+            We believe that success is achieved through highly collaborative
+            interactions.
+            <br /><br />
+            We are currently working on our appearance.<br />
+            Come back later or look below to get an update when we open.
+          </p>
+        </div>
+        <div style="padding: 2rem 0; font-size: 14px;">
+          <div class="gate">
+            <img width="25" src="./assets/img/Highlight.png" />
+            <p style="font-size: 14px"><b>TheTrybe</b> gates are closed now</p>
+          </div>
+          <div>
+            <div class="container">
+              <div class="circle1"></div>
+              <p id="btnOpenForm">Join The Waitlist</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Floating buttons -->
+      <div class="bigger topRightBox">
+        <div class="mains topRightHov" id="rotate">
+          <i class="fa-solid fa-xmark cancelIcon" id="cancel"></i>
+        </div>
+        <p style="font-size: 13px; color: rgba(255, 255, 255, 0.15); position: absolute; top: 50%;">Hover</p>
+      </div>
+      <div class="bigger topLeftBox">
+        <div class="mains3 topLeftHov" id="rotateLeft">
+          <i class="fa-solid fa-xmark cancelIcon" id="cancelLeft"></i>
+        </div>
+        <p style="font-size: 13px; color: rgba(255, 255, 255, 0.15); position: absolute; top: 50%;">Hover</p>
+      </div>
+      <div class="bigger bottomLeftBox">
+        <div class="mains2 bottomLeftHov" id="rotateLeftBottom">
+          <i class="fa-solid fa-xmark cancelIcon" id="cancelLeftBottom"></i>
+        </div>
+        <p style="font-size: 13px; color: rgba(255, 255, 255, 0.15); position: absolute; top: 50%;">Hover</p>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="imgContain">
+        <img class="image" src="./assets/img/VectorGoogle.png" />
+        <img class="image" src="./assets/img/Vectorfacebook.png" />
+        <img class="image" src="./assets/img/VectorTwitter.png" />
+      </div>
+      <p style="font-size: 14px;">
+        By
+        <a
+          style="color: white"
+          href="https://www.linkedin.com/in/excellence-jephter-22382317a" target="_blank"
+          >Excellence</a
+        >
+        &
+        <a
+          style="color: white"
+          href="https://www.linkedin.com/in/timi-akins-ba5009246/" target="_blank"
+          >Timmi</a
+        >
+      </p>
+      <div>
+        <button id="year" class="btn"></button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./assets/script.js"></script>
+</html>
