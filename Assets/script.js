@@ -158,6 +158,22 @@ document.body.addEventListener("mousemove", function (e) {
   (cursor.style.left = e.clientX + "px"), (cursor.style.top = e.clientY + "px");
 });
 
+// THE FACTS ARRAY AND SHIT
+
+// const FactsArray = [
+//   "Dog", "Cat", "Hello","Dogggg", "Catttt", "Hellttto"
+// ];
+// const factsText = () => {
+//   let number = Math.floor(Math.random() * 5 + 1);
+//   if ((number = FactsArray[Math.floor(Math.random() * 3 + 1)])) {
+//     document.getElementById("factstext").innerHTML =
+//       FactsArray[Math.floor(Math.random() * 5 + 1)];
+//   }
+// };
+
+// setInterval(factsText, 1000);
+
+
 const Quote_Array = [
   "Coding like poetry should be short and concise. ― Santosh Kalwar",
   "It's not a bug; its an undocumented feature. ― Anonymous",
@@ -208,17 +224,31 @@ let count = 1;
 function incrementCount() {
   // If count is already at 100, reset it to 1
   if (count === 100) {
-    document.getElementById("preload").style.display = "none";
+    document.getElementById("preload").classList.add('loaded');
   } else {
     count++;
   }
   // Display the current count in the console
-  console.log(count);
+  // console.log(count);
 }
 
 // Call the incrementCount function repeatedly every second
 setInterval(incrementCount, 60);
 
+// For the Counter
 const interval = setInterval(function () {
   document.getElementById("counter").innerHTML = count;
 }, 9);
+
+// Facts Hover shit
+var hover = document.getElementById('factBtn');
+var facts = document.getElementById('abs');
+hover.addEventListener("mouseover", hovIn, false);
+hover.addEventListener("mouseout", hovOut, false);
+
+function hovIn() {
+    facts.classList.add('abs');
+  };
+  function hovOut() {
+    facts.classList.remove('abs');
+  };

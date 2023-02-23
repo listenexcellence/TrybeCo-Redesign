@@ -22,17 +22,19 @@
     </script>
     <title>TheTrybe - Home</title>
   </head>
-  
-  <body>
-    <div class='cursor' id="cursor"></div>
 
-    <div class="preload" id='preload'>
-      <div class="preloadContent">
-        <div class="butn">Tech Quotes For The Day</div>
-        <div class="quote" style="font-size: 20px; text-align: center; width: 80%;" id='load-quote'><p>Clean code always looks like it was written by someone who cares. — Robert C. Martin</p></div>
-        <div class="counter"><h1 id='counter'>100</h1></div>
-      </div>
+  <!-- The Preloader -->
+
+  <div class="preload" id='preload'>
+    <div class="preloadContent">
+      <div class="butn">Tech Quotes For The Day</div>
+      <div class="quote" style="font-size: 20px; text-align: center; width: 80%;" id='load-quote'><p></p></div>
+      <div class="counter"><h1 id='counter'></h1></div>
     </div>
+  </div>
+
+  <body id="body">
+    <div class='cursor' id="cursor"></div>
     <nav>
       <a href="./index.html">
         <img width="95px" src="./assets/img/logo.png" />
@@ -106,11 +108,11 @@
         <div class="factsContainer">
           <div class="factsHead">
             <img width="100" src="Assets/img/Group1.png">
-            <div class="factBtn">
-              <p style="font-size: 13px;">Tech Facts of The Day</p>
+            <div id="factBtn" class="factBtn">
+              <div style="font-size: 13px;">Tech Facts of The Day</div>
             </div>
           </div>
-          <!-- <div class="abs facts">
+          <div id="abs" class="facts">
             <h4 style="font-family: Poppins;">Did You Know <span
               style="
                 font-family: Poppins;
@@ -119,8 +121,8 @@
                 font-size: 20px;
               "
               >?</span></h4>
-              <p style="font-family: Silka;">Augusta Ada King was the first programmer and was the daughter of a mad poet. Her mother promoted her interest in math and logic in an effort to prevent her from ending up like her father</p>
-          </div> -->
+              <p id="factstext" style="font-family: Silka;">Augusta Ada King was the first programmer and was the daughter of a mad poet. Her mother promoted her interest in math and logic in an effort to prevent her from ending up like her father</p>
+          </div>
         </div>
   
         <div class="inner">
@@ -233,9 +235,9 @@
 
     <div class="bottom">
       <div class="imgContain">
-        <img class="image" src="./assets/img/VectorGoogle.png" />
-        <img class="image" src="./assets/img/Vectorfacebook.png" />
-        <img class="image" src="./assets/img/VectorTwitter.png" />
+        <img class="image p" src="./assets/img/VectorGoogle.png" />
+        <img class="image p" src="./assets/img/Vectorfacebook.png" />
+        <img class="image p" src="./assets/img/VectorTwitter.png" />
       </div>
       <p style="font-size: 14px;">
         By
@@ -251,9 +253,9 @@
           >Timmi</a
         >
       </p>
-      <div>
+      <p>
         <button id="year" class="btn"></button>
-      </div>
+      </p>
     </div>
   </body>
   <script type="text/javascript" src="./assets/script.js"></script>

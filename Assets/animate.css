@@ -220,9 +220,21 @@ label{
   justify-content: center;
   align-items: center;
   padding: 1.2rem 2rem;
+  display: none;
+  transition: all 1.5s;
+    transition-delay: 1s;
 }
 .abs{
-  overflow: visible;
+    display: block;
+    left: 62%;
+    position: absolute;
+    top: 30.5%;  /* 312px;*/
+    z-index: 10;
+    transition: all 1.5s;
+    transition-delay: 1s;
+}
+.factBtn .abs :hover{
+  display: block;
 }
 
 /* Inner Text and Head And Button */
@@ -341,8 +353,8 @@ label{
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  height: 100px;
-  width: 75px;
+  height: 80px;
+  width: 60px;
 }
 .mains2:hover {
   -webkit-transform: rotate(0deg) scale(3);
@@ -352,8 +364,8 @@ label{
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  height: 100px;
-  width: 75px;
+  height: 80px;
+  width: 60px;
 }
 .mains3:hover {
   -webkit-transform: rotate(0deg) scale(3);
@@ -363,8 +375,8 @@ label{
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  height: 100px;
-  width: 75px;
+  height: 80px;
+  width: 60px;
 }
 
 .slideInfo{
