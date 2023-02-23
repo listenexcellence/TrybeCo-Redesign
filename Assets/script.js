@@ -297,6 +297,9 @@ function hovOut() {
   facts.classList.remove("abs");
 }
 
+
+// ABOUT DROP DOWN
+
 document
   .getElementById("dropdownAbout")
   .addEventListener("click", handledrop, true);
