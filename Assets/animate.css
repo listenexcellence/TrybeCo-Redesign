@@ -261,6 +261,22 @@ label{
   justify-content: center;
   align-items: center;
   padding: 0.4rem 2rem 1rem;
+  display: block;
+  transition: 0.5s;
+}
+.abouthidden{
+  border-radius: 10px;
+  width: 20vw;
+  height: 0;
+  overflow: hidden;
+  background: none;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 2rem 1rem;
+  display: block;
+  font-size: 1px;
+  transition: 0.5s;
 }
 .aboutHead{
   background-color: rgba(115, 115, 115, 0.45);

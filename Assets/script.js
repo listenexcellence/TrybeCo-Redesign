@@ -160,19 +160,63 @@ document.body.addEventListener("mousemove", function (e) {
 
 // THE FACTS ARRAY AND SHIT
 
-// const FactsArray = [
-//   "Dog", "Cat", "Hello","Dogggg", "Catttt", "Hellttto"
-// ];
-// const factsText = () => {
-//   let number = Math.floor(Math.random() * 5 + 1);
-//   if ((number = FactsArray[Math.floor(Math.random() * 3 + 1)])) {
-//     document.getElementById("factstext").innerHTML =
-//       FactsArray[Math.floor(Math.random() * 5 + 1)];
-//   }
-// };
+const FactsArray = [
+  "",
+  "90% of the world's data was generated between 2019 and the present.",
+  "There are more than 585,000 tech companies in the US.",
+  "The Big Four (Amazon, Apple, Google and Facebook) are collectively worth $4 trillion.",
+  "There are more than 5.1 billion active users on the internet, with Asia comprising more than 50% of total internet traffic.",
+  "4.28 billion users access the web via mobile internet.",
+  "More than 90% of Americans have internet access, with 77% reporting broadband access at home.",
+  "Technology is responsible for driving more of the US economy than any other profession aside from healthcare.",
+  "Jobs in the tech industry are continually on the rise, reaching a new high in Q4 of 2021",
+  "Statisa shows nearly 15 billion mobile devices in use in 2021, a number expected to reach 18.22 billion by 2025.",
+  "On a global scale, the smartphone industry is expanding at a CAGR of 16.4%, according to Zippia.",
+  "In the last decade, smartphone ownership has increased by 50% in the US.",
+  "Wearable technology is expected to grow to global shipments of 489.1 million devices by 2023.",
+  "Artificial Intelligence is expected to contribute $15.7 trillion to the economy by the year 2030.",
+  "The global machine learning market is to grow to $152.24 billion in 2028 at a CAGR of 38.6%.",
+  "99Firms predicts that machine learning will power 8.4 billion voice assistants by 2024.",
+  "Genpact predicts that by 2025, firms who have adopted AI will be 10 times more efficient and have twice the market share than those who haven't.",
+  "60% of entrepreneurs believe that AI is currently the most promising technology from an innovation standpoint.",
+  "91.6% of Fortune 1000 companies have plans to invest more in big data and AI initiatives.",
+  "Shopify reports a 94% higher conversion rate for retail customers using AR/VR technology than those without.",
+  "IBM reports that 40 % of small businesses and midsize organizations are evaluating AR/VR, with Gartner estimating as many as 70% looking to invest in 2022.",
+  "Quantum computing is projected to reach $780 million by 2025.",
+  "Statista predicts there will be 30.9 billion IoT devices by 2025",
+];
 
-// setInterval(factsText, 1000);
+const factsText = () => {
+  let number = Math.floor(Math.random() * 21 + 1);
+  if (
+    (number = FactsArray[Math.floor(Math.random() * 3 + 1)]) &&
+    present === millisTill10
+  ) {
+    document.getElementById("factstext").innerHTML =
+      FactsArray[Math.floor(Math.random() * 21 + 1)];
+  } else if (
+    present > millisTill10 &&
+    (number = FactsArray[Math.floor(Math.random() * 3 + 1)])
+  ) {
+  }
+  var present = new Date();
 
+  console.log(present);
+  var now = new Date();
+  var millisTill10 =
+    new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0) -
+    now;
+  if (millisTill10 < 0) {
+    millisTill10 += 86400000;
+  }
+};
+var now = new Date();
+var millisTill10 =
+  new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0) - now;
+if (millisTill10 < 0) {
+  millisTill10 += 86400000;
+}
+setInterval(factsText, 8640000);
 
 const Quote_Array = [
   "Coding like poetry should be short and concise. ― Santosh Kalwar",
@@ -224,7 +268,7 @@ let count = 1;
 function incrementCount() {
   // If count is already at 100, reset it to 1
   if (count === 100) {
-    document.getElementById("preload").classList.add('loaded');
+    document.getElementById("preload").classList.add("loaded");
   } else {
     count++;
   }
@@ -241,14 +285,28 @@ const interval = setInterval(function () {
 }, 9);
 
 // Facts Hover shit
-var hover = document.getElementById('factBtn');
-var facts = document.getElementById('abs');
+var hover = document.getElementById("factBtn");
+var facts = document.getElementById("abs");
 hover.addEventListener("mouseover", hovIn, false);
 hover.addEventListener("mouseout", hovOut, false);
 
 function hovIn() {
-    facts.classList.add('abs');
-  };
-  function hovOut() {
-    facts.classList.remove('abs');
-  };
+  facts.classList.add("abs");
+}
+function hovOut() {
+  facts.classList.remove("abs");
+}
+
+document
+  .getElementById("dropdownAbout")
+  .addEventListener("click", handledrop, true);
+
+function handledrop() {
+  console.log("working");
+  if (document.getElementById("aboutText").className == "about") {
+    document.getElementById("aboutText").classList.add("abouthidden");
+    document.getElementById("dropdownAbout").style.borderRadius = "10px";
+  } else {
+    document.getElementById("aboutText").classList.remove("abouthidden");
+  }
+}
