@@ -277,7 +277,7 @@ function incrementCount() {
 }
 
 // Call the incrementCount function repeatedly every second
-setInterval(incrementCount, 60);
+setInterval(incrementCount, 20);
 
 // For the Counter
 const interval = setInterval(function () {
@@ -296,7 +296,6 @@ function hovIn() {
 function hovOut() {
   facts.classList.remove("abs");
 }
-
 
 // ABOUT DROP DOWN
 
